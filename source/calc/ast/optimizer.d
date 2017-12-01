@@ -89,7 +89,7 @@ struct Optimizer
 
 			if (l && l.value == 0)
 			{
-				return right;
+				return new Negative(right);
 			}
 
 			if (r && r.value == 0)

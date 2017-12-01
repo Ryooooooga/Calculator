@@ -86,6 +86,6 @@ struct Differentiator
 
 	private Expression visit(Tangent node, string x)
 	{
-		return new Division(this.differentiate(node.operand, x), new Power(node.operand, new Number(2)));
+		return new Division(this.differentiate(node.operand, x), new Power(new Cosine(node.operand), new Number(2)));
 	}
 }
