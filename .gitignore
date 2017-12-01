@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+culculator
+culculator.so
+culculator.dylib
+culculator.dll
+culculator.a
+culculator.lib
+culculator-test-*
+*.exe
+*.o
+*.obj
+*.lst
