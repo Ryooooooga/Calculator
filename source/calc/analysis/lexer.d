@@ -14,9 +14,12 @@ class Lexer
 	private string       _line;
 
 	this(IInputStream stream) pure nothrow
+	in
 	{
 		assert(stream);
-
+	}
+	body
+	{
 		this._stream = stream;
 		this._line   = "";
 	}

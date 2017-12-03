@@ -9,9 +9,12 @@ struct Optimizer
 	mixin Visitor;
 
 	Expression optimize(Expression node)
+	in
 	{
 		assert(node);
-
+	}
+	body
+	{
 		return this.dispatch!"this.visit"(node);
 	}
 

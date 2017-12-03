@@ -13,7 +13,7 @@ class InputStream: IInputStream
 	}
 
 	@property
-	override bool eof() inout
+	override bool eof() inout pure
 	{
 		return this._stream.eof;
 	}

@@ -8,9 +8,12 @@ struct Differentiator
 	mixin Visitor;
 
 	Expression differentiate(Expression node, string x)
+	in
 	{
 		assert(node);
-
+	}
+	body
+	{
 		return this.dispatch!"this.visit"(node, x);
 	}
 

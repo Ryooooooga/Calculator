@@ -9,9 +9,12 @@ struct Formatter
 	mixin Visitor;
 
 	string format(Expression node)
+	in
 	{
 		assert(node);
-
+	}
+	body
+	{
 		return this.dispatch!"this.visit"(node);
 	}
 

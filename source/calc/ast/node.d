@@ -9,9 +9,12 @@ abstract class UnaryExpression: Expression
 	private Expression _operand;
 
 	this(Expression operand) pure nothrow
+	in
 	{
 		assert(operand);
-
+	}
+	body
+	{
 		this._operand  = operand;
 	}
 
@@ -35,10 +38,13 @@ abstract class BinaryExpression: Expression
 	private Expression _right;
 
 	this(Expression left, Expression right) pure nothrow
+	in
 	{
 		assert(left);
 		assert(right);
-
+	}
+	body
+	{
 		this._left  = left;
 		this._right = right;
 	}
@@ -93,9 +99,12 @@ class Variable: Expression
 	private string _name;
 
 	this(string name) pure nothrow
+	in
 	{
 		assert(name);
-
+	}
+	body
+	{
 		this._name = name;
 	}
 
